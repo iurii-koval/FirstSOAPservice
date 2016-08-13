@@ -1,18 +1,24 @@
 package com.iko.javabrains;
 
-import java.util.ArrayList;
+import com.iko.javabrains.business.ProductServiceImpl;
 import java.util.List;
 import javax.jws.WebService;
 
 @WebService
 public class ProductCatalog {
     
+    ProductServiceImpl productService = new ProductServiceImpl();
+    
     public List<String> getProductCategories() {
-        List<String> productCategories = new ArrayList<>();
-        productCategories.add("books");
-        productCategories.add("music");
-        productCategories.add("moovies");
-        return productCategories;
+        return productService.getProductCategories();
+    }
+    
+    public List<String> getProducts(String category) {
+        return productService.getProducts(category);
+    }
+    
+    public boolean addProduct(String productCategory, String product) {
+        return productService.addProduct(productCategory, product);
     }
     
 }
