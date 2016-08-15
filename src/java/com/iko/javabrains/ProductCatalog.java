@@ -4,7 +4,8 @@ import com.iko.javabrains.business.ProductServiceImpl;
 import java.util.List;
 import javax.jws.WebService;
 
-@WebService
+@WebService(name = "TestMartCatalog", portName = "TestMartCatalogPort", serviceName = "TestMartCatalogService",
+        targetNamespace = "http://www.testmart.com")
 public class ProductCatalog {
     
     ProductServiceImpl productService = new ProductServiceImpl();

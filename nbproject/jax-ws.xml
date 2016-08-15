@@ -4,6 +4,9 @@
     <service name="ProductCatalog">
       <implementation-class>com.iko.javabrains.ProductCatalog</implementation-class>
     </service>
+    <service name="ShopInfo">
+      <implementation-class>com.iko.javabrains.ShopInfo</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>
