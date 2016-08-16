@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="ProductCatalog">
-      <implementation-class>com.iko.javabrains.ProductCatalog</implementation-class>
-    </service>
     <service name="ShopInfo">
       <implementation-class>com.iko.javabrains.ShopInfo</implementation-class>
     </service>

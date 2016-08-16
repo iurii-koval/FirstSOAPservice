@@ -1,5 +1,6 @@
 package com.iko.javabrains.business;
 
+import com.iko.javabrains.model.Product;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,13 @@ public class ProductServiceImpl {
         productCategories.add("music");
         productCategories.add("moovies");
         return productCategories;
+    }
+    
+    public List<Product> getProductsV2(String priductCategory) {
+        List<Product> products = new ArrayList<>();
+        products.add(new Product("oca 8", "421", 45.45));
+        products.add(new Product("clean code", "532", 50.99));
+        return products;
     }
     
     public List<String> getProducts(String productCategory) {
