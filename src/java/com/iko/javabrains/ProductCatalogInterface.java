@@ -3,10 +3,10 @@ package com.iko.javabrains;
 import com.iko.javabrains.model.Product;
 import java.util.List;
 import javax.jws.WebMethod;
+import javax.jws.WebResult;
 import javax.jws.WebService;
 
-@WebService(name = "TestMartCatalog", portName = "TestMartCatalogPort", serviceName = "TestMartCatalogService",
-        targetNamespace = "http://www.testmart.com")
+@WebService(name = "TestMartCatalog", targetNamespace = "http://www.testmart.com")
 public interface ProductCatalogInterface {
 
     @WebMethod
@@ -19,6 +19,7 @@ public interface ProductCatalogInterface {
     List<String> getProducts(String category);
 
     @WebMethod
+    @WebResult(name = "product")
     List<Product> getProductsV2(String category);
     
 }

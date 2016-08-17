@@ -5,7 +5,8 @@ import com.iko.javabrains.model.Product;
 import java.util.List;
 import javax.jws.WebService;
 
-@WebService(endpointInterface = "com.iko.javabrains.ProductCatalogInterface")
+@WebService(endpointInterface = "com.iko.javabrains.ProductCatalogInterface",
+        portName = "TestMartCatalogPort", serviceName = "TestMartCatalogService")
 public class ProductCatalog implements ProductCatalogInterface {
     
     ProductServiceImpl productService = new ProductServiceImpl();
